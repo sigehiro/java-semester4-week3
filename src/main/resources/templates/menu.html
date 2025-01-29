@@ -9,24 +9,30 @@
 <body>
     <header th:include="@{/fragments/header.html}"></header>
 
-    <h1>Menu</h1>
-    <table class="table table-striped">
-        <thead>
-        <tr>
-            <th scope="col">ID</th>
-            <th scope="col">Name</th>
-            <th scope="col">Category</th>
-            <th scope="col">Price</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr th:each="dish:${dishes}">
-            <th scope="row" th:text="${dish.id}">1</th>
-            <td th:text="${dish.name}">Mark</td>
-            <td th:text="${dish.category}">Otto</td>
-            <td th:text="${dish.price}">@mdo</td>
-        </tr>
-        </tbody>
-    </table>
+    <div class="content">
+        <div th:if="${message}" th:text="${message}" class="alert alert-success"></div>
+
+        <h1>Menu</h1>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th scope="col">ID</th>
+                <th scope="col">Name</th>
+                <th scope="col">Category</th>
+                <th scope="col">Price</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="dish:${dishes}">
+                <th scope="row" th:text="${dish.id}">1</th>
+                <td th:text="${dish.name}">Mark</td>
+                <td th:text="${dish.category}">Otto</td>
+                <td th:text="${dish.price}">@mdo</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+
+
 </body>
 </html>
