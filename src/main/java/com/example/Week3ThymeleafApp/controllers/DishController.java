@@ -54,7 +54,7 @@ public class DishController {
         //save the data
         //open the menu page with updates data
         model.addAttribute("dishes", dish);
-        model.addAttribute("message", dish.getName() + "added successfully");
+        model.addAttribute("message", dish.getName() + " added successfully");
         return "menu";
     }
 
